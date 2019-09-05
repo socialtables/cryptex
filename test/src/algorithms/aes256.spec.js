@@ -80,7 +80,7 @@ describe('AES256 Algorithm', () => {
     })
   })
   it('rejects when the RNG fails', () => {
-    stub = sinon.stub(crypto, 'randomBytes', (bytes, cb) => {
+    stub = sinon.stub(crypto, 'randomBytes').callsFake((bytes, cb) => {
       cb(new Error('foo'))
     })
     return algo.encrypt(key, 'foo').should.be.rejected

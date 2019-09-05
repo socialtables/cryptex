@@ -1,5 +1,5 @@
 {
-  "name": "cryptex",
+  "name": "@socialtables/cryptex",
   "version": "1.0.0",
   "description": "Secure secret storage and cryptographic key retrieval for Node.js",
   "main": "src/index.js",
@@ -14,13 +14,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TomFrost/Cryptex.git"
+    "url": "git+https://github.com/socialtables/cryptex.git"
   },
   "files": [
     "src"
   ],
   "engines": {
-    "node": ">=4.2.0"
+    "node": ">=8"
   },
   "keywords": [
     "crypto",
@@ -37,25 +37,25 @@
   "author": "Tom Shawver <tom@frosteddesign.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TomFrost/Cryptex/issues"
+    "url": "https://github.com/socialtables/cryptex/issues"
   },
-  "homepage": "https://github.com/TomFrost/Cryptex#readme",
+  "homepage": "https://github.com/socialtables/Cryptex#readme",
   "yargs": {
     "parse-numbers": false
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "chai-as-promised": "^5.3.0",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
     "eslint": "^3.0.1",
     "istanbul": "^0.4.4",
-    "mocha": "^2.5.3",
-    "nock": "^8.0.0",
-    "sinon": "^1.17.4",
-    "tmp": "0.0.28"
+    "mocha": "^6.2.0",
+    "nock": "^11.3.1",
+    "sinon": "^7.4.2",
+    "tmp": "^0.1.0"
   },
   "dependencies": {
     "aws-sdk": "^2.4.6",
-    "lodash": "^3.10.1",
+    "lodash.clone": "^4.5.0",
     "request": "^2.73.0",
     "yargs": "^4.8.0"
   }

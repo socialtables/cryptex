@@ -4,17 +4,17 @@
 
 'use strict'
 
-const _ = require('lodash')
+const _clone = require('lodash.clone')
 const Cryptex = require('src').Cryptex
 const path = require('path')
 
-const originalEnvs = _.clone(process.env)
+const originalEnvs = _clone(process.env)
 const fooEnc = 'Q+JfrQS5DtSjqWHu1oO4HqctA2hVw4VhaDQfBCuvO8U='
 const key = 'WJcfREHOMttStwb1927PQwpDJgOgRyVoVMODQxx3pK4='
 
 describe('Cryptex Class', () => {
   afterEach(() => {
-    process.env = _.clone(originalEnvs)
+    process.env = _clone(originalEnvs)
   })
   describe('Core API', () => {
     it('constructs without options', () => {
