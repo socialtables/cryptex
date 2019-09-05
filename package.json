@@ -1,6 +1,6 @@
 {
   "name": "@socialtables/cryptex",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Secure secret storage and cryptographic key retrieval for Node.js",
   "main": "src/index.js",
   "bin": "./src/cli.js",
