@@ -4,7 +4,7 @@
 
 'use strict'
 
-const _ = require('lodash')
+const _clone = require('lodash.clone')
 const path = require('path')
 const UserError = require('./lib/UserError')
 
@@ -12,7 +12,6 @@ const defaultFilename = 'cryptex.json'
 const defaultEnv = 'default'
 
 class Cryptex {
-
   /**
    * Constructs a new instance of Cryptex.
    * @param {Object} [opts={}] An options object
@@ -113,7 +112,7 @@ class Cryptex {
    *    a file load without specifying a config, pass an empty object here.
    */
   update(opts) {
-    _.assign(this._opts, opts || {})
+    Object.assign(this._opts, opts || {})
     if (this._opts.config) {
       this._config = this._opts.config
     } else {
@@ -166,7 +165,7 @@ class Cryptex {
       throw new UserError('Cryptex files must end in .json')
     }
     try {
-      this._confFile = _.clone(require(path.resolve(this._opts.file)), true)
+      this._confFile = _clone(require(path.resolve(this._opts.file)), true)
     } catch (e) {
       this._confFile = {}
     }
