@@ -10,7 +10,9 @@
     "mocha": "mocha",
     "test-cov": "istanbul cover node_modules/.bin/_mocha",
     "check-cov": "istanbul check-coverage --statements 99 --branches 98 --functions 100 --lines 99",
-    "lint": "eslint ./src ./test"
+    "lint": "eslint ./src ./test",
+    "changeset": "changeset",
+    "release": "st-changeset release --skipPublish"
   },
   "repository": {
     "type": "git",
@@ -44,6 +46,8 @@
     "parse-numbers": false
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.1",
+    "@socialtables/changesets": "^1.2.2",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "eslint": "^3.0.1",

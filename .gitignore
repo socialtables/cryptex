@@ -11,3 +11,9 @@ build/
 
 # JetBrains
 .idea
+
+# cdk outputs artifacts into tmp/cdk
+tmp
+
+# sonarcloud artifacts
+.scannerwork
