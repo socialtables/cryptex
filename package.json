@@ -12,7 +12,7 @@
     "check-cov": "istanbul check-coverage --statements 99 --branches 98 --functions 100 --lines 99",
     "lint": "eslint ./src ./test",
     "changeset": "changeset",
-    "release": "st-changeset release --skipPublish"
+    "release": "st-changeset release"
   },
   "repository": {
     "type": "git",
